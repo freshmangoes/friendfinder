@@ -1,3 +1,8 @@
+<!-- 
+  WIP
+  Still have to generate some better questions and show the best match.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -16,11 +21,204 @@
 		<title>FriendFinder Survey</title>
 	</head>
 	<body>
-    <h1>
-      Henlo! Survey!
-    </h1>
+		<div class="container">
+			<h1>Questions</h1>
+			<hr />
+			<h2>About You!</h2>
+
+			<form>
+				<div class="form-group">
+					<label for="name"><h3>Name (required)</h3></label>
+					<input type="text" class="form-control name" required />
+				</div>
+				<div class="form-group">
+					<label for="self-portrait"
+						><h3>Link to a self-portrait (required)</h3></label>
+					<input type="text" class="form-control self-portrait" required />
+				</div>
+			</form>
+
+			<hr />
+			<form>
+				<div class="form-group">
+					<label for="question1"><h4>Question 1</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You like cars</h5></span>
+						<input
+							class="form-inline question1"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question2"><h4>Question 2</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question2"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question3"><h4>Question 3</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question3"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question4"><h4>Question 4</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question4"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question5"><h4>Question 5</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question5"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question6"><h4>Question 6</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question6"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question7"><h4>Question 7</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question7"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question8"><h4>Question 8</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question8"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question9"><h4>Question 9</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question9"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="question10"><h4>Question 10</h4></label>
+					<div class="input-group">
+						<span class="input-group-text"><h5>You enjoy cars</h5></span>
+						<input
+							class="form-inline question10"
+							type="number"
+							min="1"
+							max="5"
+							placeholder="1"
+						/>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-outline-success submit">
+					Submit
+				</button>
+			</form>
+		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(`.submit`).click(function() {
+        event.preventDefault();
+        let myData = {
+          name: $(`.name`).val().trim(),
+          selfPortrait: $(`.self-portrait`).val().trim(),
+          scores: [
+            $(`.question1`).val(),
+            $(`.question2`).val(),
+            $(`.question3`).val(),
+            $(`.question4`).val(),
+            $(`.question5`).val(),
+            $(`.question6`).val(),
+            $(`.question7`).val(),
+            $(`.question8`).val(),
+            $(`.question9`).val(),
+            $(`.question10`).val(),
+          ]
+        };
+
+        console.log(myData);
+
+        $.post(`/api/friends`, myData, (data) => {
+          if(data) {
+            alert(`Congrats, you've completed the survey! You will be matched momentarily.`)
+          } else {
+            alert(`Something went wrong :(`);
+          }
+        });
+      });
+    </script>
 	</body>
 </html>

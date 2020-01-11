@@ -22,7 +22,9 @@ module.exports = app => {
         res.json(friendData);
     });
 
+    // WIP, still have to develop matching logic 
     app.post(`/api/friends`, (req, res) => {
-        
+        friendData.push(req.body);
+        res.json(true);
     });
 }
