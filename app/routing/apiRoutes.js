@@ -17,14 +17,69 @@
 
 let friendData = require(`../data/friends`);
 
-module.exports = app => {
-    app.get(`/api/friends`, (req, res) => {
-        res.json(friendData);
-    });
+const getMatch = (diffArr, possibleMatches) => {
+	// sort the array of differences in ascending order
+	diffArr = diffArr.sort((a, b) => a - b);
+	// console.log(diffArr[0]);
 
-    // WIP, still have to develop matching logic 
-    app.post(`/api/friends`, (req, res) => {
-        friendData.push(req.body);
-        res.json(true);
-    });
-}
+	// get the value to the key in the possibleMatches obj
+	let bestMatch = possibleMatches[diffArr[0]];
+
+	return bestMatch;
+	// console.log(`Best Match: ${bestMatch}`);
+};
+
+module.exports = (app) => {
+	app.get(`/api/friends`, (req, res) => {
+		res.json(friendData);
+	});
+
+	// WIP, still have to develop matching logic
+	app.post(`/api/friends`, (req, res) => {
+		let possibleMatches = {};
+		let diffArr = [];
+		let userScores = req.body.scores;
+		// console.log(`user scores: ${userScores}`);
+
+		for (let i = 0; i < friendData.length; i++) {
+			let diff = 0;
+			let friendScores = friendData[i].scores;
+
+			for (let i = 0; i < friendScores.length; i++) {
+				diff += Math.abs(friendScores[i] - userScores[i]);
+			}
+
+			// console.log(`Diff: ${diff}`);
+			diffArr.push(diff);
+			possibleMatches[Number(diff)] = friendData[i].name;
+		}
+
+		// console.log(`diffArr ${diffArr}`);
+		// console.log(
+		// 	`Possible Matches: ${JSON.stringify(possibleMatches, null, 2)}`
+		// );
+
+		// best possible match
+		let findMatch = getMatch(diffArr, possibleMatches);
+		let match = {};
+
+		// looping through the array to get the match data
+		for (let i = 0; i < friendData.length; i++) {
+			if (friendData[i].name == findMatch) {
+				// console.log(`Found`);
+				// console.log(
+				// 	`friendData of match ${JSON.stringify(friendData[i], null, 2)}`
+				// );
+				match = {
+					name: friendData[i].name,
+					photo: friendData[i].photo
+				};
+			}
+		}
+
+		// console.log(`Match: ${JSON.stringify(match, null, 2)}`);
+
+		friendData.push(req.body);
+		res.json(match);
+	});
+};
