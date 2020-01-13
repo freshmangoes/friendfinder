@@ -17,204 +17,172 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Questions</h1>
-			<h5>Instructions</h5>
-			<p>Select a value between 1 and 5 for each of the following questions.</p>
-			<p>5 (strongly agree) - 1 (strongly disagree)</p>
-			<hr />
-			<h2>About You!</h2>
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>Questions</h1>
+					<h5>Instructions</h5>
+					<p>
+						Select a value between 1 and 5 for each of the following questions.
+					</p>
+					<p>5 (strongly agree) - 1 (strongly disagree)</p>
+					<hr />
+					<h2>About You!</h2>
 
-			<form>
-				<div class="form-group">
-					<label for="name"><h3>Name (required)</h3></label>
-					<input type="text" class="form-control name" required />
-				</div>
-				<div class="form-group">
-					<label for="self-portrait"
-						><h3>Link to a self-portrait (required)</h3></label
-					>
-					<input type="text" class="form-control self-portrait" required />
-				</div>
-			</form>
+					<form>
+						<div class="form-group">
+							<label for="name"><h3>Name (required)</h3></label>
+							<input type="text" class="form-control name" required />
+						</div>
+						<div class="form-group">
+							<label for="self-portrait"
+								><h3>Link to a self-portrait (required)</h3></label
+							>
+							<input type="text" class="form-control self-portrait" required />
+						</div>
+					</form>
 
-			<hr />
+					<hr />
 
-			<form>
-				<div class="form-group">
-					<label for="question1"><h4>Question 1</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>Your mind is always wandering.</h5></span
-						>
-						<input
-							class="form-inline question1 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+					<form>
+						<div class="form-group">
+							<label for="question1"><h4>Question 1</h4></label>
+							<h5>Your mind is always wandering.</h5>
+							<select class="chosen-select" id="q1">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question2"><h4>Question 2</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>
-								You rely on experience rather than your imagination.
-							</h5></span
-						>
-						<input
-							class="form-inline question2 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question2"><h4>Question 2</h4></label>
+							<h5>You rely on experience more often than your imagination.</h5>
+							<select class="chosen-select" id="q2">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question3"><h4>Question 3</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>You find it easy to remain relaxed under pressure.</h5></span
-						>
-						<input
-							class="form-inline question3 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question3"><h4>Question 3</h4></label>
+							<h5>You find it easy to remain relaxed under pressure.</h5>
+							<select class="chosen-select" id="q3">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question4"><h4>Question 4</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>You do things out of sheer curiosity.</h5></span
-						>
-						<input
-							class="form-inline question4 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question4"><h4>Question 4</h4></label>
+							<h5>You do things out of sheer curiosity.</h5>
+							<select class="chosen-select" id="q4">
+\								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question5"><h4>Question 5</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>People can rarely upset you.</h5></span
-						>
-						<input
-							class="form-inline question5 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question5"><h4>Question 5</h4></label>
+							<h5>
+								Others rarely upset you.
+							</h5>
+							<select class="chosen-select" id="q5">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question6"><h4>Question 6</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>
-								You find it difficult understanding other people's feelings.
-							</h5></span
-						>
-						<input
-							class="form-inline question6 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question6"><h4>Question 6</h4></label>
+							<h5>
+								You find it difficult to empathize with people.
+							</h5>
+							<select class="chosen-select" id="q6">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question7"><h4>Question 7</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>
-								Truth is more important than people's sensitivities.
-							</h5></span
-						>
-						<input
-							class="form-inline question7 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question7"><h4>Question 7</h4></label>
+							<h5>
+								The truth is more important than people's sensitivities.
+							</h5>
+							<select class="chosen-select" id="q7">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question8"><h4>Question 8</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>You get carried away by fantasies and ideas.</h5></span
-						>
-						<input
-							class="form-inline question8 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="question8"><h4>Question 8</h4></label>
+							<h5>
+								You get lost in daydreams.
+							</h5>
+							<select class="chosen-select" id="q8">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question9"><h4>Question 9</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>
+						<div class="form-group">
+							<label for="question9"><h4>Question 9</h4></label>
+							<h5>
 								You think that everyone's views should be respected regardless
 								of whether they're supported by facts or not.
-							</h5></span
-						>
-						<input
-							class="form-inline question9 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+							</h5>
+							<select class="chosen-select" id="q9">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<div class="form-group">
-					<label for="question10"><h4>Question 10</h4></label>
-					<div class="input-group">
-						<span class="input-group-text"
-							><h5>
+						<div class="form-group">
+							<label for="question10"><h4>Question 10</h4></label>
+							<h5>
 								You feel more energetic after spending time with people.
-							</h5></span
-						>
-						<input
-							class="form-inline question10 question"
-							type="number"
-							min="1"
-							max="5"
-							placeholder="1"
-						/>
-					</div>
-				</div>
+							</h5>
+							<select class="chosen-select" id="q10">
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
 
-				<button type="submit" class="btn btn-outline-success submit">
-					Submit
-				</button>
-			</form>
+						<button type="submit" class="btn btn-outline-success submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -235,7 +203,7 @@
 					});
 
 					$('.question').each(function() {
-						if ($(this).val > 5 || $(this).val < 1 || $(this).val == "") {
+						if ($(this).val == '') {
 							isValid = false;
 						}
 					});
@@ -251,22 +219,21 @@
 							.val()
 							.trim(),
 						scores: [
-							$(`.question1`).val(),
-							$(`.question2`).val(),
-							$(`.question3`).val(),
-							$(`.question4`).val(),
-							$(`.question5`).val(),
-							$(`.question6`).val(),
-							$(`.question7`).val(),
-							$(`.question8`).val(),
-							$(`.question9`).val(),
-							$(`.question10`).val()
+							$(`#q1`).val(),
+							$(`#q2`).val(),
+							$(`#q3`).val(),
+							$(`#q4`).val(),
+							$(`#q5`).val(),
+							$(`#q6`).val(),
+							$(`#q7`).val(),
+							$(`#q8`).val(),
+							$(`#q9`).val(),
+							$(`#q10`).val()
 						]
 					};
 
 					$.post(`/api/friends`, myData, (data) => {
 						if (data) {
-
 							swal({
 								title: data.name,
 								text: `You've been matched!`,
