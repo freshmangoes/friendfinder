@@ -1,5 +1,3 @@
-// Should require the node packages express and path
-
 // Dependencies
 const express = require(`express`);
 const path = require(`path`);
