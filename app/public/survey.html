@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,13 +13,12 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="style.css" />
 		<title>FriendFinder Survey</title>
 	</head>
-	<body>
+	<body class="bg-dark text-light">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
+			<div class="row d-flex justify-content-center">
+				<div class="col-sm-12 col-md-8 col-lg-6">
 					<h1>Questions</h1>
 					<h5>Instructions</h5>
 					<p>
@@ -31,13 +31,13 @@
 					<form>
 						<div class="form-group">
 							<label for="name"><h3>Name (required)</h3></label>
-							<input type="text" class="form-control name" required />
+							<input type="text" class="form-control name bg-dark text-light" required />
 						</div>
 						<div class="form-group">
 							<label for="self-portrait"
 								><h3>Link to a self-portrait (required)</h3></label
 							>
-							<input type="text" class="form-control self-portrait" required />
+							<input type="text" class="form-control self-portrait bg-dark text-light" required />
 						</div>
 					</form>
 
@@ -47,7 +47,7 @@
 						<div class="form-group">
 							<label for="question1"><h4>Question 1</h4></label>
 							<h5>Your mind is always wandering.</h5>
-							<select class="chosen-select" id="q1">
+							<select class="chosen-select bg-dark text-light" id="q1">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -59,7 +59,7 @@
 						<div class="form-group">
 							<label for="question2"><h4>Question 2</h4></label>
 							<h5>You rely on experience more often than your imagination.</h5>
-							<select class="chosen-select" id="q2">
+							<select class="chosen-select bg-dark text-light" id="q2">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -71,7 +71,7 @@
 						<div class="form-group">
 							<label for="question3"><h4>Question 3</h4></label>
 							<h5>You find it easy to remain relaxed under pressure.</h5>
-							<select class="chosen-select" id="q3">
+							<select class="chosen-select bg-dark text-light" id="q3">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -83,8 +83,9 @@
 						<div class="form-group">
 							<label for="question4"><h4>Question 4</h4></label>
 							<h5>You do things out of sheer curiosity.</h5>
-							<select class="chosen-select" id="q4">
-\								<option value="1">1 (Strongly Disagree)</option>
+							<select class="chosen-select bg-dark text-light" id="q4">
+								\
+								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
 								<option value="4">4</option>
@@ -97,7 +98,7 @@
 							<h5>
 								Others rarely upset you.
 							</h5>
-							<select class="chosen-select" id="q5">
+							<select class="chosen-select bg-dark text-light" id="q5">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -111,7 +112,7 @@
 							<h5>
 								You find it difficult to empathize with people.
 							</h5>
-							<select class="chosen-select" id="q6">
+							<select class="chosen-select bg-dark text-light" id="q6">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -125,7 +126,7 @@
 							<h5>
 								The truth is more important than people's sensitivities.
 							</h5>
-							<select class="chosen-select" id="q7">
+							<select class="chosen-select bg-dark text-light" id="q7">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -139,7 +140,7 @@
 							<h5>
 								You get lost in daydreams.
 							</h5>
-							<select class="chosen-select" id="q8">
+							<select class="chosen-select bg-dark text-light" id="q8">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -154,7 +155,7 @@
 								You think that everyone's views should be respected regardless
 								of whether they're supported by facts or not.
 							</h5>
-							<select class="chosen-select" id="q9">
+							<select class="chosen-select bg-dark text-light" id="q9">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -168,7 +169,7 @@
 							<h5>
 								You feel more energetic after spending time with people.
 							</h5>
-							<select class="chosen-select" id="q10">
+							<select class="chosen-select bg-dark text-light" id="q10">
 								<option value="1">1 (Strongly Disagree)</option>
 								<option value="2">2</option>
 								<option value="3">3</option>

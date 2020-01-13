@@ -12,24 +12,27 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>FriendFinder!</title>
 	</head>
-	<body>
-		<div class="container">
-			<div class="jumbotron">
-				<h1>Friend Finder!</h1>
-				<h2>Take a survey and find a compatible friend!</h2>
-				<div>
-					<a href="/survey">
-						<button type="button" class="btn-outline-primary btn btn-lg">
-							<h4>Go to survey</h4>
-						</button>
-					</a>
+	<body class="bg-dark text-light">
+		<div class="container text-center">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-8">
+					<div class="jumbotron bg-dark text-light">
+						<h1>Friend Finder!</h1>
+						<h2>Take a survey and find a compatible friend!</h2>
+						<div>
+							<a href="/survey">
+								<button type="button" class="btn-outline-primary btn btn-lg">
+									<h4>Go to survey</h4>
+								</button>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<footer class="footer">
+			<footer class="footer fixed-bottom justify-content">
 				<div class="container">
 					<p><a href="/api/friends">API Friends List</a></p>
 				</div>
